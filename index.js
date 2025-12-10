@@ -5,6 +5,7 @@ const PORT = 5000;
 
 const msg = `
   <p>지금부터 수정할꺼야. 그럼 이제 <span style='color:red'>새로운 이미지가</span> 도커허브에 올라가겠지???</p>
+  <p>실패...secret 다시 설정하고 한번 더!!!!</p>
 `;
 
 const server = http.createServer((req, res) => {
