@@ -33,4 +33,4 @@ jobs:
       with:
         context: . # Dockerfile이 있는 현재 디렉토리
         push: true #빌드 후 바로 푸시
-        tags: ${{ Secrets.DOCKER_USERNAME }}/nwork:latest # 최종 이미지 태그 지정
+        tags: ${{ secrets.DOCKER_USERNAME }}/nwork:latest # 최종 이미지 태그 지정
