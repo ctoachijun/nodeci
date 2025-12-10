@@ -1,0 +1,14 @@
+# 의존성 폴더
+node_modules/
+
+#로그 및 디버그
+npm-debug.log
+yarn-error.log
+
+# 빌드 및 배포 관련 폴더
+dist/
+build/
+.env
+
+#운영체제, 환경별 임시파일
+.DS_Store
