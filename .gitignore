@@ -12,3 +12,4 @@ build/
 
 #운영체제, 환경별 임시파일
 .DS_Store
+.vscode
