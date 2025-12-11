@@ -4,6 +4,8 @@
 const { getProductPrice, productRepository } = require('../services/productService');
 const mockFindById = jest.spyOn(productRepository, 'findById');
 
+console.log(mockFindById);
+
 const mockRepository = {
     findById: mockFindById,
 };
