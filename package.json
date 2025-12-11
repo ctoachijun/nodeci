@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon --legacy-watch index.js",
     "test:unit": "jest --testPathIgnorePatterns='integration' --coverage",
-    "test:integration": "jest --testPathPattern='integration'",
+    "test:integration": "jest --testPathPatterns='integration'",
     "test": "npm run test:unit && npm run test:integration"
   },
   "keywords": [],
