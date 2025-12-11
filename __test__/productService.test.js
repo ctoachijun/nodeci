@@ -4,8 +4,6 @@
 const { getProductPrice, productRepository } = require('../services/productService');
 const mockFindById = jest.spyOn(productRepository, 'findById');
 
-console.log(mockFindById);
-
 const mockRepository = {
     findById: mockFindById,
 };
@@ -30,6 +28,12 @@ describe('Product Service Unit Tests', () => {
 //     // productRepository.findById.mockClear();
 //     mockFindById.mockClear();
 //   });
+
+  let mockFindByhId;
+  beforeEach( () => {
+    mockFindById = jest.spyOn(productRepository, 'findById');
+  })
+
   afterEach( () => {
     mockFindById.mockRestore();
   });
