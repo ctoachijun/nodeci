@@ -4,8 +4,8 @@
 const { getProductPrice, productRepository } = require('./productService');
 
 // productRepository의 findById 함수를 Jest Mock 함수로 대체
-jest.mock('./productService', () => ({
-  ...jest.requireActual('./productService'),
+jest.mock('../services/productService', () => ({
+  ...jest.requireActual('../services/productService'),
   productRepository: {
     findById: jest.fn(), // findById만 Mocking
   },
