@@ -29,7 +29,7 @@ describe('Product Service Unit Tests', () => {
 //     mockFindById.mockClear();
 //   });
 
-  let mockFindByhId;
+  let mockFindById;
   beforeEach( () => {
     mockFindById = jest.spyOn(productRepository, 'findById');
   })
