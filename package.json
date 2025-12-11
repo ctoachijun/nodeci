@@ -6,13 +6,17 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon --legacy-watch index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:unit": "jest --testPathIgnorePatterns='integration' --coverage",
+    "test:integration": "jest --testPathPattern='integration'",
+    "test": "npm run test:unit && npm run test:integration"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.11",
+    "supertest": "^6.3.3"
   }
 }
