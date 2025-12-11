@@ -5,6 +5,7 @@ const { getProductPrice, productRepository } = require('../services/productServi
 
 
 var mockFindById = jest.fn();
+console.log(mockFindById);
 
 // productRepository의 findById 함수를 Jest Mock 함수로 대체
 jest.mock('../services/productService', () => ({
