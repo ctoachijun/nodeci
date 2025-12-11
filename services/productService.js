@@ -9,6 +9,10 @@ const productRepository = {
     return null; // 상품 없음
   }
 };
+const getRepository = () => productRepository;
+
+
+
 
 // 테스트 대상 함수 (핵심 비즈니스 로직)
 const getProductPrice = async (id) => {
@@ -22,4 +26,5 @@ const getProductPrice = async (id) => {
   return product.basePrice * (1 - product.discountRate);
 };
 
-module.exports = { getProductPrice, productRepository };
+// module.exports = { getProductPrice, productRepository };
+module.exports = { getProductPrice, productRepository: getRepository() };
