@@ -1,8 +1,8 @@
 // services/productService.test.js
 // 테스트 환경: 단위 테스트 (unit test)
 
-
-var mockFindById = jest.fn();
+const { getProductPrice, productRepository } = require('../services/productService');
+const mockFindById = jest.spyOn(productRepository, 'findById');
 
 const mockRepository = {
     findById: mockFindById,
@@ -19,16 +19,19 @@ jest.mock('../services/productService', () => ({
 }));
 
 
-// const { getProductPrice, productRepository } = require('../services/productService');
-const { getProductPrice } = require('../services/productService');
+
 
 describe('Product Service Unit Tests', () => {
 
   // 각 테스트 실행 전 Mock 함수 초기화 (필수)
-  beforeEach(() => {
-    // productRepository.findById.mockClear();
-    mockFindById.mockClear();
+//   beforeEach(() => {
+//     // productRepository.findById.mockClear();
+//     mockFindById.mockClear();
+//   });
+  afterEach( () => {
+    mockFindById.mockRestore();
   });
+
 
   test('할인율 10%가 정확히 적용되어야 한다.', async () => {
     // Mocking: findById가 호출되면 특정 데이터를 반환하도록 설정
