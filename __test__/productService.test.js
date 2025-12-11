@@ -1,11 +1,8 @@
 // services/productService.test.js
 // 테스트 환경: 단위 테스트 (unit test)
 
-const { getProductPrice, productRepository } = require('../services/productService');
-
 
 var mockFindById = jest.fn();
-console.log(mockFindById);
 
 // productRepository의 findById 함수를 Jest Mock 함수로 대체
 jest.mock('../services/productService', () => ({
@@ -14,6 +11,12 @@ jest.mock('../services/productService', () => ({
     findById: mockFindById, // findById만 Mocking
   },
 }));
+
+
+// const { getProductPrice, productRepository } = require('../services/productService');
+const { getProductPrice } = require('../services/productService');
+console.log(getProductPrice);
+
 
 describe('Product Service Unit Tests', () => {
 
