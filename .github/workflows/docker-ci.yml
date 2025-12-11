@@ -17,10 +17,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24.x
-          cache: 'npm'
-          
+          # cache: 'npm'
+
       - name: 의존성 설치
-        run: npm install
+        run: npm ci
       
       - name: 단위 테스트 실행
         run: npm run test:unit
