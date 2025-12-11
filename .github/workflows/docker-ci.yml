@@ -13,6 +13,9 @@ jobs:
 
     steps:
       ## 코드 테스트 ##
+      - name : Checkout repository
+        uses: actions/checkout@v4
+
       - name: Node.js 환경 설정
         uses: actions/setup-node@v4
         with:
